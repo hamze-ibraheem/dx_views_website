@@ -1,0 +1,27 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <script>
+      // Workaround for environments where window.fetch is a getter-only and third-party scripts try to assign to it
+      try {
+        let currentFetch = window.fetch;
+        Object.defineProperty(window, 'fetch', {
+          get: function() { return currentFetch; },
+          set: function(v) {
+            console.warn('Ignored attempt to overwrite window.fetch');
+          },
+          configurable: true,
+          enumerable: true
+        });
+      } catch(e) {}
+    </script>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>دكس فيوز | DXViews — Premium Gaming Café Riyadh</title>
+  </head>
+  <body>
+    <div id="root"></div>
+    <script type="module" src="/src/main.tsx"></script>
+  </body>
+</html>
+

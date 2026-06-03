@@ -1,0 +1,134 @@
+@import url('https://fonts.googleapis.com/css2?family=Cairo:wght@300;400;500;600;700;800;900&family=Inter:wght@300;400;500;600;700;800;900&family=Rajdhani:wght@400;500;600;700;800&display=swap');
+@import "tailwindcss";
+
+@theme {
+  --font-sans: 'Inter', 'Cairo', system-ui, sans-serif;
+  --font-display: 'Rajdhani', 'Cairo', sans-serif;
+  --font-arabic: 'Cairo', 'Inter', sans-serif;
+  
+  --color-gaming-dark: #0a0a0f;
+  --color-gaming-card: rgba(255, 255, 255, 0.03);
+  --color-gaming-blue: #0066ff;
+  --color-gaming-gold: #f0a500;
+  --color-gaming-cyan: #00f0ff;
+}
+
+@layer base {
+  html {
+    scroll-behavior: smooth;
+    background-color: var(--color-gaming-dark, #0a0a0f);
+    color: #f3f4f6;
+  }
+}
+
+.theme-midnight {
+  --color-gaming-dark: #000000;
+  --color-gaming-blue: #9333ea; /* electric purple */
+  --color-gaming-cyan: #d8b4fe; /* lighter purple */
+  --color-gaming-gold: #c084fc;
+}
+
+.theme-midnight .glow-blue {
+  box-shadow: 0 0 15px rgba(147, 51, 234, 0.4);
+}
+
+.theme-midnight .glow-blue-sm {
+  box-shadow: 0 0 10px rgba(147, 51, 234, 0.25);
+}
+
+.theme-midnight .glow-gold {
+  box-shadow: 0 0 15px rgba(192, 132, 252, 0.3);
+}
+
+.theme-midnight .glow-text-blue {
+  text-shadow: 0 0 10px rgba(147, 51, 234, 0.6);
+}
+
+.theme-midnight .glow-text-gold {
+  text-shadow: 0 0 10px rgba(192, 132, 252, 0.5);
+}
+
+.theme-midnight .glass-panel-hover:hover {
+  border-color: rgba(147, 51, 234, 0.35);
+  box-shadow: 0 8px 24px -8px rgba(147, 51, 234, 0.15);
+}
+
+.theme-midnight .bg-gradient-orb {
+  background: radial-gradient(circle at 50% 50%, #1a0b2e 0%, #000000 100%);
+}
+
+.theme-midnight .stat-card-accent {
+  border-left-color: #9333ea;
+}
+html[dir="rtl"] .theme-midnight .stat-card-accent {
+  border-right-color: #9333ea;
+}
+
+
+/* Custom glow effects and backdrops */
+.glow-blue {
+  box-shadow: 0 0 15px rgba(0, 102, 255, 0.4);
+}
+
+.glow-blue-sm {
+  box-shadow: 0 0 10px rgba(0, 102, 255, 0.25);
+}
+
+.glow-gold {
+  box-shadow: 0 0 15px rgba(240, 165, 0, 0.3);
+}
+
+.glow-text-blue {
+  text-shadow: 0 0 10px rgba(0, 102, 255, 0.6);
+}
+
+.glow-text-gold {
+  text-shadow: 0 0 10px rgba(240, 165, 0, 0.5);
+}
+
+/* Glassmorphism from High Density specs */
+.glass-panel {
+  background: rgba(255, 255, 255, 0.03);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+.glass-panel-hover {
+  transition: all 0.25s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.glass-panel-hover:hover {
+  background: rgba(255, 255, 255, 0.06);
+  border-color: rgba(0, 102, 255, 0.35);
+  box-shadow: 0 8px 24px -8px rgba(0, 102, 255, 0.15);
+}
+
+/* Radial-gradient theme background */
+.bg-gradient-orb {
+  background: radial-gradient(circle at 50% 50%, #1a1a2e 0%, #0a0a0f 100%);
+}
+
+/* Left-border stat layout decoration from theme */
+.stat-card-accent {
+  border-left: 2px solid #0066ff;
+}
+html[dir="rtl"] .stat-card-accent {
+  border-left: none;
+  border-right: 2px solid #0066ff;
+}
+
+/* Scanlines/grid overlays for a cinematic sci-fi feel */
+.scanlines {
+  background: linear-gradient(
+    rgba(18, 16, 16, 0) 50%, 
+    rgba(0, 0, 0, 0.25) 50%
+  ), linear-gradient(
+    90deg, 
+    rgba(255, 0, 0, 0.01), 
+    rgba(0, 255, 0, 0.002), 
+    rgba(0, 0, 255, 0.01)
+  );
+  background-size: 100% 4px, 6px 100%;
+}
+

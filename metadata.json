@@ -1,0 +1,6 @@
+{
+  "name": "DXViews",
+  "description": "Premium cinematic gaming café in Riyadh, Saudi Arabia",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
